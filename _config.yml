@@ -1,0 +1,20 @@
+title: haloblue
+description: "Notes on security, systems, and the societies built on top of them."
+url: "https://haloblue.github.io"
+author: haloblue
+
+permalink: /:year/:title/
+markdown: kramdown
+timezone: America/New_York
+
+plugins:
+  - jekyll-feed
+
+feed:
+  path: feed.xml
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor

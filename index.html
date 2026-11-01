@@ -1,9 +1,16 @@
+---
+layout: default
+---
+<p class="intro">Notes on security, systems, and the societies built on top of them. Written slowly, in no particular order.</p>
 
-<h1>Haloblue</h1>
-<p>There was a time when I was able to hack out code like this, meaning HTML as fast as I could think and in turn type.
-	Those days are long, long gone by now and I have no idea what I'm doing.</p><ul><li>
-	
-	Borders are a political concept that should allow for permeability and not lines to define cultures.
-	
-	To what end though? While the centralized model of the Nation State wanes, what will be there to replace it? A global entity? Doubtful, as that is not a viable option given current technological states and population size and geographic dispersion.</li><li>We assign weights to communication mediums by generation.<br></li></ul>
-
+<section class="listing" aria-label="Posts">
+  <p class="listing-cmd dim">ls -lt ~/posts</p>
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li>
+      <time class="dim" datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%Y-%m-%d" }}</time>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>

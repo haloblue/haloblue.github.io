@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title %}{{ page.title }} — {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Serif:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><circle cx='8' cy='8' r='6' fill='none' stroke='%235CA8FF' stroke-width='2'/></svg>">
+</head>
+<body>
+<header class="site-header">
+  <div class="prompt-line">
+    <a class="prompt" href="{{ '/' | relative_url }}">haloblue<span class="prompt-colon">:</span><span class="prompt-path">~</span><span class="prompt-dollar">$</span></a><span class="cursor" aria-hidden="true"></span>
+  </div>
+  <nav class="site-nav">
+    <a href="{{ '/' | relative_url }}">posts</a>
+    <a href="{{ '/about/' | relative_url }}">about</a>
+    <a href="{{ '/feed.xml' | relative_url }}">rss</a>
+  </nav>
+</header>
+<main>
+{{ content }}
+</main>
+<footer class="site-footer">
+  <span class="dim">© {{ site.time | date: "%Y" }} haloblue · <a href="https://github.com/haloblue">github.com/haloblue</a></span>
+</footer>
+</body>
+</html>

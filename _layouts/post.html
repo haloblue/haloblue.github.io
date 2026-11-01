@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time></p>
+    <h1 class="post-title">{{ page.title }}</h1>
+  </header>
+  <div class="post-body">
+    {{ content }}
+  </div>
+</article>
+<p class="back-link"><a href="{{ '/' | relative_url }}">cd ..</a></p>
